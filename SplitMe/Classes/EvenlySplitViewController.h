@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EvenlySplitViewController.h
 //  SplitMe
 //
 //  Created by Dennis on 1/5/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface EvenlySplitViewController : UIViewController
 
 @end
