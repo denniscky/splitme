@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1E922D05EA10424C861A04E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B26C530CD6654422B09089AB /* libPods.a */; };
+		5D09845317BB0272008D7F0D /* cocktail-icon-214x214.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09844F17BB0272008D7F0D /* cocktail-icon-214x214.png */; };
+		5D09845517BB0272008D7F0D /* salad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845117BB0272008D7F0D /* salad.png */; };
+		5D09845817BB085A008D7F0D /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845717BB085A008D7F0D /* chicken.png */; };
+		5D09845A17BB088F008D7F0D /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845917BB088F008D7F0D /* cake.png */; };
+		5D09845C17BB09BA008D7F0D /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845B17BB09BA008D7F0D /* pencil.png */; };
+		5D09846517BB1E30008D7F0D /* UIRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09845E17BB1E30008D7F0D /* UIRoundedButton.m */; };
+		5D09846617BB1E30008D7F0D /* UIRoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09846017BB1E30008D7F0D /* UIRoundedImageView.m */; };
+		5D09846717BB1E30008D7F0D /* UIRoundedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09846217BB1E30008D7F0D /* UIRoundedLabel.m */; };
+		5D09846817BB1E30008D7F0D /* UIRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09846417BB1E30008D7F0D /* UIRoundedView.m */; };
 		5D1900471698D3A800C0D335 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1900461698D3A800C0D335 /* UIKit.framework */; };
 		5D1900491698D3A800C0D335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1900481698D3A800C0D335 /* Foundation.framework */; };
 		5D19004B1698D3A800C0D335 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D19004A1698D3A800C0D335 /* CoreGraphics.framework */; };
@@ -29,6 +38,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D09844F17BB0272008D7F0D /* cocktail-icon-214x214.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-icon-214x214.png"; sourceTree = "<group>"; };
+		5D09845117BB0272008D7F0D /* salad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salad.png; sourceTree = "<group>"; };
+		5D09845717BB085A008D7F0D /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
+		5D09845917BB088F008D7F0D /* cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cake.png; sourceTree = "<group>"; };
+		5D09845B17BB09BA008D7F0D /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		5D09845D17BB1E30008D7F0D /* UIRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedButton.h; sourceTree = "<group>"; };
+		5D09845E17BB1E30008D7F0D /* UIRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedButton.m; sourceTree = "<group>"; };
+		5D09845F17BB1E30008D7F0D /* UIRoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedImageView.h; sourceTree = "<group>"; };
+		5D09846017BB1E30008D7F0D /* UIRoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedImageView.m; sourceTree = "<group>"; };
+		5D09846117BB1E30008D7F0D /* UIRoundedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedLabel.h; sourceTree = "<group>"; };
+		5D09846217BB1E30008D7F0D /* UIRoundedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedLabel.m; sourceTree = "<group>"; };
+		5D09846317BB1E30008D7F0D /* UIRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedView.h; sourceTree = "<group>"; };
+		5D09846417BB1E30008D7F0D /* UIRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedView.m; sourceTree = "<group>"; };
 		5D1900421698D3A800C0D335 /* SplitMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1900461698D3A800C0D335 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5D1900481698D3A800C0D335 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -140,6 +162,11 @@
 		5D19006F1698DA3100C0D335 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5D09845717BB085A008D7F0D /* chicken.png */,
+				5D09845917BB088F008D7F0D /* cake.png */,
+				5D09845B17BB09BA008D7F0D /* pencil.png */,
+				5D09844F17BB0272008D7F0D /* cocktail-icon-214x214.png */,
+				5D09845117BB0272008D7F0D /* salad.png */,
 				5D1900701698DA3100C0D335 /* Default-568h@2x.png */,
 				5D1900711698DA3100C0D335 /* Default.png */,
 				5D1900721698DA3100C0D335 /* Default@2x.png */,
@@ -163,6 +190,14 @@
 				5D19009A169A336C00C0D335 /* AddSharedItemViewController.h */,
 				5D19009B169A336C00C0D335 /* AddSharedItemViewController.m */,
 				5D19009D169A337F00C0D335 /* AddDinerItemViewController.h */,
+				5D09845D17BB1E30008D7F0D /* UIRoundedButton.h */,
+				5D09845E17BB1E30008D7F0D /* UIRoundedButton.m */,
+				5D09845F17BB1E30008D7F0D /* UIRoundedImageView.h */,
+				5D09846017BB1E30008D7F0D /* UIRoundedImageView.m */,
+				5D09846117BB1E30008D7F0D /* UIRoundedLabel.h */,
+				5D09846217BB1E30008D7F0D /* UIRoundedLabel.m */,
+				5D09846317BB1E30008D7F0D /* UIRoundedView.h */,
+				5D09846417BB1E30008D7F0D /* UIRoundedView.m */,
 				5D19009E169A337F00C0D335 /* AddDinerItemViewController.m */,
 				5D1900A0169A3A9000C0D335 /* AnySharedItemsViewController.h */,
 				5D1900A1169A3A9000C0D335 /* AnySharedItemsViewController.m */,
@@ -228,6 +263,11 @@
 				5D1900761698DA3100C0D335 /* Default.png in Resources */,
 				5D1900771698DA3100C0D335 /* Default@2x.png in Resources */,
 				5D1900801698DCEE00C0D335 /* Podfile in Resources */,
+				5D09845317BB0272008D7F0D /* cocktail-icon-214x214.png in Resources */,
+				5D09845517BB0272008D7F0D /* salad.png in Resources */,
+				5D09845817BB085A008D7F0D /* chicken.png in Resources */,
+				5D09845A17BB088F008D7F0D /* cake.png in Resources */,
+				5D09845C17BB09BA008D7F0D /* pencil.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +304,10 @@
 				5D19009C169A336C00C0D335 /* AddSharedItemViewController.m in Sources */,
 				5D19009F169A337F00C0D335 /* AddDinerItemViewController.m in Sources */,
 				5D1900A2169A3A9000C0D335 /* AnySharedItemsViewController.m in Sources */,
+				5D09846517BB1E30008D7F0D /* UIRoundedButton.m in Sources */,
+				5D09846617BB1E30008D7F0D /* UIRoundedImageView.m in Sources */,
+				5D09846717BB1E30008D7F0D /* UIRoundedLabel.m in Sources */,
+				5D09846817BB1E30008D7F0D /* UIRoundedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
