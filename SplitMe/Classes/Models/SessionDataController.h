@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#define MAX_DINER 20
+
 @interface SessionDataController : NSObject
+
++ (SessionDataController *)sharedInstance;
+
+@property NSUInteger dinerCount;
+@property NSUInteger totalAmountDecimal2;
 
 @end
