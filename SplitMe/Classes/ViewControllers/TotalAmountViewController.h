@@ -11,5 +11,7 @@
 @interface TotalAmountViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UILabel *labelDinerCount;
+
 
 @end

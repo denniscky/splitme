@@ -13,10 +13,18 @@
 		5D09845817BB085A008D7F0D /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845717BB085A008D7F0D /* chicken.png */; };
 		5D09845A17BB088F008D7F0D /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845917BB088F008D7F0D /* cake.png */; };
 		5D09845C17BB09BA008D7F0D /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845B17BB09BA008D7F0D /* pencil.png */; };
-		5D09846517BB1E30008D7F0D /* UIRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09845E17BB1E30008D7F0D /* UIRoundedButton.m */; };
-		5D09846617BB1E30008D7F0D /* UIRoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09846017BB1E30008D7F0D /* UIRoundedImageView.m */; };
-		5D09846717BB1E30008D7F0D /* UIRoundedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09846217BB1E30008D7F0D /* UIRoundedLabel.m */; };
-		5D09846817BB1E30008D7F0D /* UIRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09846417BB1E30008D7F0D /* UIRoundedView.m */; };
+		5D0984B717BC5981008D7F0D /* SessionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09849D17BC5981008D7F0D /* SessionDataController.m */; };
+		5D0984B817BC5981008D7F0D /* AddDinerItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A117BC5981008D7F0D /* AddDinerItemViewController.m */; };
+		5D0984B917BC5981008D7F0D /* AddSharedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A317BC5981008D7F0D /* AddSharedItemViewController.m */; };
+		5D0984BA17BC5981008D7F0D /* AnySharedItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A517BC5981008D7F0D /* AnySharedItemsViewController.m */; };
+		5D0984BB17BC5981008D7F0D /* DinerItemsReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A717BC5981008D7F0D /* DinerItemsReviewViewController.m */; };
+		5D0984BC17BC5981008D7F0D /* EvenlySplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A917BC5981008D7F0D /* EvenlySplitViewController.m */; };
+		5D0984BD17BC5981008D7F0D /* SharedItemsReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984AB17BC5981008D7F0D /* SharedItemsReviewViewController.m */; };
+		5D0984BE17BC5981008D7F0D /* TotalAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984AD17BC5981008D7F0D /* TotalAmountViewController.m */; };
+		5D0984BF17BC5981008D7F0D /* UIRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984B017BC5981008D7F0D /* UIRoundedButton.m */; };
+		5D0984C017BC5981008D7F0D /* UIRoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984B217BC5981008D7F0D /* UIRoundedImageView.m */; };
+		5D0984C117BC5981008D7F0D /* UIRoundedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984B417BC5981008D7F0D /* UIRoundedLabel.m */; };
+		5D0984C217BC5981008D7F0D /* UIRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984B617BC5981008D7F0D /* UIRoundedView.m */; };
 		5D1900471698D3A800C0D335 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1900461698D3A800C0D335 /* UIKit.framework */; };
 		5D1900491698D3A800C0D335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1900481698D3A800C0D335 /* Foundation.framework */; };
 		5D19004B1698D3A800C0D335 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D19004A1698D3A800C0D335 /* CoreGraphics.framework */; };
@@ -27,14 +35,7 @@
 		5D1900761698DA3100C0D335 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D1900711698DA3100C0D335 /* Default.png */; };
 		5D1900771698DA3100C0D335 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D1900721698DA3100C0D335 /* Default@2x.png */; };
 		5D19007D1698DA4500C0D335 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D19007A1698DA4500C0D335 /* AppDelegate.m */; };
-		5D19007E1698DA4500C0D335 /* TotalAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D19007C1698DA4500C0D335 /* TotalAmountViewController.m */; };
 		5D1900801698DCEE00C0D335 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5D19007F1698DCEE00C0D335 /* Podfile */; };
-		5D19008F1698E86C00C0D335 /* EvenlySplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D19008E1698E86C00C0D335 /* EvenlySplitViewController.m */; };
-		5D190096169A32A000C0D335 /* SharedItemsReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D190095169A32A000C0D335 /* SharedItemsReviewViewController.m */; };
-		5D190099169A32C900C0D335 /* DinerItemsReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D190098169A32C900C0D335 /* DinerItemsReviewViewController.m */; };
-		5D19009C169A336C00C0D335 /* AddSharedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D19009B169A336C00C0D335 /* AddSharedItemViewController.m */; };
-		5D19009F169A337F00C0D335 /* AddDinerItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D19009E169A337F00C0D335 /* AddDinerItemViewController.m */; };
-		5D1900A2169A3A9000C0D335 /* AnySharedItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1900A1169A3A9000C0D335 /* AnySharedItemsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,14 +44,30 @@
 		5D09845717BB085A008D7F0D /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
 		5D09845917BB088F008D7F0D /* cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cake.png; sourceTree = "<group>"; };
 		5D09845B17BB09BA008D7F0D /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
-		5D09845D17BB1E30008D7F0D /* UIRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedButton.h; sourceTree = "<group>"; };
-		5D09845E17BB1E30008D7F0D /* UIRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedButton.m; sourceTree = "<group>"; };
-		5D09845F17BB1E30008D7F0D /* UIRoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedImageView.h; sourceTree = "<group>"; };
-		5D09846017BB1E30008D7F0D /* UIRoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedImageView.m; sourceTree = "<group>"; };
-		5D09846117BB1E30008D7F0D /* UIRoundedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedLabel.h; sourceTree = "<group>"; };
-		5D09846217BB1E30008D7F0D /* UIRoundedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedLabel.m; sourceTree = "<group>"; };
-		5D09846317BB1E30008D7F0D /* UIRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedView.h; sourceTree = "<group>"; };
-		5D09846417BB1E30008D7F0D /* UIRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedView.m; sourceTree = "<group>"; };
+		5D09849C17BC5981008D7F0D /* SessionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDataController.h; sourceTree = "<group>"; };
+		5D09849D17BC5981008D7F0D /* SessionDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDataController.m; sourceTree = "<group>"; };
+		5D0984A017BC5981008D7F0D /* AddDinerItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDinerItemViewController.h; sourceTree = "<group>"; };
+		5D0984A117BC5981008D7F0D /* AddDinerItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDinerItemViewController.m; sourceTree = "<group>"; };
+		5D0984A217BC5981008D7F0D /* AddSharedItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSharedItemViewController.h; sourceTree = "<group>"; };
+		5D0984A317BC5981008D7F0D /* AddSharedItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSharedItemViewController.m; sourceTree = "<group>"; };
+		5D0984A417BC5981008D7F0D /* AnySharedItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnySharedItemsViewController.h; sourceTree = "<group>"; };
+		5D0984A517BC5981008D7F0D /* AnySharedItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnySharedItemsViewController.m; sourceTree = "<group>"; };
+		5D0984A617BC5981008D7F0D /* DinerItemsReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DinerItemsReviewViewController.h; sourceTree = "<group>"; };
+		5D0984A717BC5981008D7F0D /* DinerItemsReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DinerItemsReviewViewController.m; sourceTree = "<group>"; };
+		5D0984A817BC5981008D7F0D /* EvenlySplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvenlySplitViewController.h; sourceTree = "<group>"; };
+		5D0984A917BC5981008D7F0D /* EvenlySplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvenlySplitViewController.m; sourceTree = "<group>"; };
+		5D0984AA17BC5981008D7F0D /* SharedItemsReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedItemsReviewViewController.h; sourceTree = "<group>"; };
+		5D0984AB17BC5981008D7F0D /* SharedItemsReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedItemsReviewViewController.m; sourceTree = "<group>"; };
+		5D0984AC17BC5981008D7F0D /* TotalAmountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalAmountViewController.h; sourceTree = "<group>"; };
+		5D0984AD17BC5981008D7F0D /* TotalAmountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalAmountViewController.m; sourceTree = "<group>"; };
+		5D0984AF17BC5981008D7F0D /* UIRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedButton.h; sourceTree = "<group>"; };
+		5D0984B017BC5981008D7F0D /* UIRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedButton.m; sourceTree = "<group>"; };
+		5D0984B117BC5981008D7F0D /* UIRoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedImageView.h; sourceTree = "<group>"; };
+		5D0984B217BC5981008D7F0D /* UIRoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedImageView.m; sourceTree = "<group>"; };
+		5D0984B317BC5981008D7F0D /* UIRoundedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedLabel.h; sourceTree = "<group>"; };
+		5D0984B417BC5981008D7F0D /* UIRoundedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedLabel.m; sourceTree = "<group>"; };
+		5D0984B517BC5981008D7F0D /* UIRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedView.h; sourceTree = "<group>"; };
+		5D0984B617BC5981008D7F0D /* UIRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedView.m; sourceTree = "<group>"; };
 		5D1900421698D3A800C0D335 /* SplitMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1900461698D3A800C0D335 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5D1900481698D3A800C0D335 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,21 +82,7 @@
 		5D1900721698DA3100C0D335 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5D1900791698DA4500C0D335 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D19007A1698DA4500C0D335 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5D19007B1698DA4500C0D335 /* TotalAmountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalAmountViewController.h; sourceTree = "<group>"; };
-		5D19007C1698DA4500C0D335 /* TotalAmountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalAmountViewController.m; sourceTree = "<group>"; };
 		5D19007F1698DCEE00C0D335 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
-		5D19008D1698E86C00C0D335 /* EvenlySplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvenlySplitViewController.h; sourceTree = "<group>"; };
-		5D19008E1698E86C00C0D335 /* EvenlySplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvenlySplitViewController.m; sourceTree = "<group>"; };
-		5D190094169A32A000C0D335 /* SharedItemsReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedItemsReviewViewController.h; sourceTree = "<group>"; };
-		5D190095169A32A000C0D335 /* SharedItemsReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedItemsReviewViewController.m; sourceTree = "<group>"; };
-		5D190097169A32C900C0D335 /* DinerItemsReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DinerItemsReviewViewController.h; sourceTree = "<group>"; };
-		5D190098169A32C900C0D335 /* DinerItemsReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DinerItemsReviewViewController.m; sourceTree = "<group>"; };
-		5D19009A169A336C00C0D335 /* AddSharedItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSharedItemViewController.h; sourceTree = "<group>"; };
-		5D19009B169A336C00C0D335 /* AddSharedItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSharedItemViewController.m; sourceTree = "<group>"; };
-		5D19009D169A337F00C0D335 /* AddDinerItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDinerItemViewController.h; sourceTree = "<group>"; };
-		5D19009E169A337F00C0D335 /* AddDinerItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDinerItemViewController.m; sourceTree = "<group>"; };
-		5D1900A0169A3A9000C0D335 /* AnySharedItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnySharedItemsViewController.h; sourceTree = "<group>"; };
-		5D1900A1169A3A9000C0D335 /* AnySharedItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnySharedItemsViewController.m; sourceTree = "<group>"; };
 		B26C530CD6654422B09089AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70BC8CEF1344BC69AF44F41 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -99,6 +102,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D09849B17BC5981008D7F0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D09849C17BC5981008D7F0D /* SessionDataController.h */,
+				5D09849D17BC5981008D7F0D /* SessionDataController.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D09849E17BC5981008D7F0D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5D09849F17BC5981008D7F0D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D0984A017BC5981008D7F0D /* AddDinerItemViewController.h */,
+				5D0984A117BC5981008D7F0D /* AddDinerItemViewController.m */,
+				5D0984A217BC5981008D7F0D /* AddSharedItemViewController.h */,
+				5D0984A317BC5981008D7F0D /* AddSharedItemViewController.m */,
+				5D0984A417BC5981008D7F0D /* AnySharedItemsViewController.h */,
+				5D0984A517BC5981008D7F0D /* AnySharedItemsViewController.m */,
+				5D0984A617BC5981008D7F0D /* DinerItemsReviewViewController.h */,
+				5D0984A717BC5981008D7F0D /* DinerItemsReviewViewController.m */,
+				5D0984A817BC5981008D7F0D /* EvenlySplitViewController.h */,
+				5D0984A917BC5981008D7F0D /* EvenlySplitViewController.m */,
+				5D0984AA17BC5981008D7F0D /* SharedItemsReviewViewController.h */,
+				5D0984AB17BC5981008D7F0D /* SharedItemsReviewViewController.m */,
+				5D0984AC17BC5981008D7F0D /* TotalAmountViewController.h */,
+				5D0984AD17BC5981008D7F0D /* TotalAmountViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D0984AE17BC5981008D7F0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D0984AF17BC5981008D7F0D /* UIRoundedButton.h */,
+				5D0984B017BC5981008D7F0D /* UIRoundedButton.m */,
+				5D0984B117BC5981008D7F0D /* UIRoundedImageView.h */,
+				5D0984B217BC5981008D7F0D /* UIRoundedImageView.m */,
+				5D0984B317BC5981008D7F0D /* UIRoundedLabel.h */,
+				5D0984B417BC5981008D7F0D /* UIRoundedLabel.m */,
+				5D0984B517BC5981008D7F0D /* UIRoundedView.h */,
+				5D0984B617BC5981008D7F0D /* UIRoundedView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5D1900371698D3A800C0D335 = {
 			isa = PBXGroup;
 			children = (
@@ -179,28 +234,10 @@
 			children = (
 				5D1900791698DA4500C0D335 /* AppDelegate.h */,
 				5D19007A1698DA4500C0D335 /* AppDelegate.m */,
-				5D19007B1698DA4500C0D335 /* TotalAmountViewController.h */,
-				5D19007C1698DA4500C0D335 /* TotalAmountViewController.m */,
-				5D19008D1698E86C00C0D335 /* EvenlySplitViewController.h */,
-				5D19008E1698E86C00C0D335 /* EvenlySplitViewController.m */,
-				5D190094169A32A000C0D335 /* SharedItemsReviewViewController.h */,
-				5D190095169A32A000C0D335 /* SharedItemsReviewViewController.m */,
-				5D190097169A32C900C0D335 /* DinerItemsReviewViewController.h */,
-				5D190098169A32C900C0D335 /* DinerItemsReviewViewController.m */,
-				5D19009A169A336C00C0D335 /* AddSharedItemViewController.h */,
-				5D19009B169A336C00C0D335 /* AddSharedItemViewController.m */,
-				5D19009D169A337F00C0D335 /* AddDinerItemViewController.h */,
-				5D09845D17BB1E30008D7F0D /* UIRoundedButton.h */,
-				5D09845E17BB1E30008D7F0D /* UIRoundedButton.m */,
-				5D09845F17BB1E30008D7F0D /* UIRoundedImageView.h */,
-				5D09846017BB1E30008D7F0D /* UIRoundedImageView.m */,
-				5D09846117BB1E30008D7F0D /* UIRoundedLabel.h */,
-				5D09846217BB1E30008D7F0D /* UIRoundedLabel.m */,
-				5D09846317BB1E30008D7F0D /* UIRoundedView.h */,
-				5D09846417BB1E30008D7F0D /* UIRoundedView.m */,
-				5D19009E169A337F00C0D335 /* AddDinerItemViewController.m */,
-				5D1900A0169A3A9000C0D335 /* AnySharedItemsViewController.h */,
-				5D1900A1169A3A9000C0D335 /* AnySharedItemsViewController.m */,
+				5D09849B17BC5981008D7F0D /* Models */,
+				5D09849E17BC5981008D7F0D /* Utils */,
+				5D09849F17BC5981008D7F0D /* ViewControllers */,
+				5D0984AE17BC5981008D7F0D /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -297,17 +334,18 @@
 			files = (
 				5D1900531698D3A800C0D335 /* main.m in Sources */,
 				5D19007D1698DA4500C0D335 /* AppDelegate.m in Sources */,
-				5D19007E1698DA4500C0D335 /* TotalAmountViewController.m in Sources */,
-				5D19008F1698E86C00C0D335 /* EvenlySplitViewController.m in Sources */,
-				5D190096169A32A000C0D335 /* SharedItemsReviewViewController.m in Sources */,
-				5D190099169A32C900C0D335 /* DinerItemsReviewViewController.m in Sources */,
-				5D19009C169A336C00C0D335 /* AddSharedItemViewController.m in Sources */,
-				5D19009F169A337F00C0D335 /* AddDinerItemViewController.m in Sources */,
-				5D1900A2169A3A9000C0D335 /* AnySharedItemsViewController.m in Sources */,
-				5D09846517BB1E30008D7F0D /* UIRoundedButton.m in Sources */,
-				5D09846617BB1E30008D7F0D /* UIRoundedImageView.m in Sources */,
-				5D09846717BB1E30008D7F0D /* UIRoundedLabel.m in Sources */,
-				5D09846817BB1E30008D7F0D /* UIRoundedView.m in Sources */,
+				5D0984B717BC5981008D7F0D /* SessionDataController.m in Sources */,
+				5D0984B817BC5981008D7F0D /* AddDinerItemViewController.m in Sources */,
+				5D0984B917BC5981008D7F0D /* AddSharedItemViewController.m in Sources */,
+				5D0984BA17BC5981008D7F0D /* AnySharedItemsViewController.m in Sources */,
+				5D0984BB17BC5981008D7F0D /* DinerItemsReviewViewController.m in Sources */,
+				5D0984BC17BC5981008D7F0D /* EvenlySplitViewController.m in Sources */,
+				5D0984BD17BC5981008D7F0D /* SharedItemsReviewViewController.m in Sources */,
+				5D0984BE17BC5981008D7F0D /* TotalAmountViewController.m in Sources */,
+				5D0984BF17BC5981008D7F0D /* UIRoundedButton.m in Sources */,
+				5D0984C017BC5981008D7F0D /* UIRoundedImageView.m in Sources */,
+				5D0984C117BC5981008D7F0D /* UIRoundedLabel.m in Sources */,
+				5D0984C217BC5981008D7F0D /* UIRoundedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

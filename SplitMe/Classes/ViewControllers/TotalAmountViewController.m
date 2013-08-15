@@ -14,13 +14,9 @@
 
 @implementation TotalAmountViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
+///////////////////////
+// Inherited methods //
+///////////////////////
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,15 +29,15 @@
                                              selector:@selector(didShowKeyboard:)
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
-    [self.textField becomeFirstResponder];
+    self.labelDinerCount.text = [NSString stringWithFormat:@"1"];
+    //[self.textField becomeFirstResponder];
 }
 
-- (void)willShowKeyboard:(NSNotification *)notification {
-    [UIView setAnimationsEnabled:NO];
+- (void)viewWillAppear:(BOOL)animated {
 }
 
-- (void)didShowKeyboard:(NSNotification *)notification {
-    [UIView setAnimationsEnabled:YES];
+- (void)viewWillDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,6 +48,7 @@
 
 - (void)viewDidUnload {
     [self setTextField:nil];
+    [self setLabelDinerCount:nil];
     [super viewDidUnload];
 }
 
@@ -59,6 +56,27 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+//////////////////////
+// IBAction methods //
+//////////////////////
+- (IBAction)buttonBackClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+//////////////////////////
+// Notification methods //
+//////////////////////////
+- (void)willShowKeyboard:(NSNotification *)notification {
+    [UIView setAnimationsEnabled:NO];
+}
+
+- (void)didShowKeyboard:(NSNotification *)notification {
+    [UIView setAnimationsEnabled:YES];
+}
+
+//////////////////////
+// Delegate methods //
+//////////////////////
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     return YES;
