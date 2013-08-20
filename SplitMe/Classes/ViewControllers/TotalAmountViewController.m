@@ -8,6 +8,7 @@
 
 #import "TotalAmountViewController.h"
 #import "SessionDataController.h"
+#import "DinerReadyViewController.h"
 
 @interface TotalAmountViewController ()
 
@@ -30,10 +31,6 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-    
-    // If we want keybaord to show up on load (keep for later reference)
-    //[self.textField becomeFirstResponder];
-    
     
     self.buttonDone.alpha = 0.0;
     self.dinerCount = 0;
@@ -68,19 +65,30 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    if ([identifier isEqualToString:@"segueAfterTotalAmount"]) {
-        SessionDataController *session = [SessionDataController sharedInstance];
-        session.totalAmountDecimal2 = self.totalAmountDecimal2;
-        session.dinerCount = self.dinerCount;
-    }
-}
-
 //////////////////////
 // IBAction methods //
 //////////////////////
 - (IBAction)buttonBackClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)buttonStartClicked:(id)sender {
+    
+    if (self.dinerCount <= 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Zero Diners"
+                                                        message:@"You can't have no one eating..."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    SessionDataController *session = [SessionDataController sharedInstance];
+    session.totalAmountDecimal2 = self.totalAmountDecimal2;
+    session.dinerCount = self.dinerCount;
+    [session beginSession];
+    [self performSegueForDinerOne];
 }
 
 - (IBAction)buttonIncrementDinerClicked:(id)sender {
@@ -122,6 +130,18 @@
     [result insertString:@"$" atIndex:0];
     [result insertString:@"." atIndex:result.length-2];
     return result;
+}
+
+- (void)performSegueForDinerOne {
+    UIStoryboard *storyboard = self.storyboard;
+    UIViewController *overviewScreen = [storyboard instantiateViewControllerWithIdentifier:@"OverviewViewController"];
+    DinerReadyViewController *readyScreen = [storyboard instantiateViewControllerWithIdentifier:@"DinerReadyViewController"];
+    readyScreen.diner = [[SessionDataController sharedInstance].diners objectAtIndex:0];
+    
+    NSMutableArray *currentStack = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    [currentStack addObject:overviewScreen];
+    [currentStack addObject:readyScreen];
+    [self.navigationController setViewControllers:(NSArray *)currentStack animated:YES];
 }
 
 //////////////////////////

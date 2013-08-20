@@ -14,17 +14,12 @@
 		5D09845A17BB088F008D7F0D /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845917BB088F008D7F0D /* cake.png */; };
 		5D09845C17BB09BA008D7F0D /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845B17BB09BA008D7F0D /* pencil.png */; };
 		5D0984B717BC5981008D7F0D /* SessionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09849D17BC5981008D7F0D /* SessionDataController.m */; };
-		5D0984B817BC5981008D7F0D /* AddDinerItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A117BC5981008D7F0D /* AddDinerItemViewController.m */; };
-		5D0984B917BC5981008D7F0D /* AddSharedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A317BC5981008D7F0D /* AddSharedItemViewController.m */; };
-		5D0984BA17BC5981008D7F0D /* AnySharedItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A517BC5981008D7F0D /* AnySharedItemsViewController.m */; };
-		5D0984BB17BC5981008D7F0D /* DinerItemsReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A717BC5981008D7F0D /* DinerItemsReviewViewController.m */; };
-		5D0984BC17BC5981008D7F0D /* EvenlySplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984A917BC5981008D7F0D /* EvenlySplitViewController.m */; };
-		5D0984BD17BC5981008D7F0D /* SharedItemsReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984AB17BC5981008D7F0D /* SharedItemsReviewViewController.m */; };
 		5D0984BE17BC5981008D7F0D /* TotalAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984AD17BC5981008D7F0D /* TotalAmountViewController.m */; };
 		5D0984BF17BC5981008D7F0D /* UIRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984B017BC5981008D7F0D /* UIRoundedButton.m */; };
 		5D0984C017BC5981008D7F0D /* UIRoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984B217BC5981008D7F0D /* UIRoundedImageView.m */; };
 		5D0984C117BC5981008D7F0D /* UIRoundedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984B417BC5981008D7F0D /* UIRoundedLabel.m */; };
 		5D0984C217BC5981008D7F0D /* UIRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984B617BC5981008D7F0D /* UIRoundedView.m */; };
+		5D0984CC17C2FBC9008D7F0D /* DinerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0984CB17C2FBC9008D7F0D /* DinerInfo.m */; };
 		5D1900471698D3A800C0D335 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1900461698D3A800C0D335 /* UIKit.framework */; };
 		5D1900491698D3A800C0D335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1900481698D3A800C0D335 /* Foundation.framework */; };
 		5D19004B1698D3A800C0D335 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D19004A1698D3A800C0D335 /* CoreGraphics.framework */; };
@@ -36,6 +31,11 @@
 		5D1900771698DA3100C0D335 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D1900721698DA3100C0D335 /* Default@2x.png */; };
 		5D19007D1698DA4500C0D335 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D19007A1698DA4500C0D335 /* AppDelegate.m */; };
 		5D1900801698DCEE00C0D335 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5D19007F1698DCEE00C0D335 /* Podfile */; };
+		5D7A26A717C2FEED00F4E66A /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A26A617C2FEED00F4E66A /* OverviewViewController.m */; };
+		5D7A26AA17C307A300F4E66A /* DinerItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A26A917C307A300F4E66A /* DinerItemViewController.m */; };
+		5D7A26AD17C30FC800F4E66A /* DinerReadyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A26AC17C30FC800F4E66A /* DinerReadyViewController.m */; };
+		5D7A26B017C3148000F4E66A /* UIPriceTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A26AF17C3147F00F4E66A /* UIPriceTextField.m */; };
+		5D7A26B317C31A7B00F4E66A /* UIPriceTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A26B217C31A7B00F4E66A /* UIPriceTextFieldDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,18 +46,6 @@
 		5D09845B17BB09BA008D7F0D /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		5D09849C17BC5981008D7F0D /* SessionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDataController.h; sourceTree = "<group>"; };
 		5D09849D17BC5981008D7F0D /* SessionDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDataController.m; sourceTree = "<group>"; };
-		5D0984A017BC5981008D7F0D /* AddDinerItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDinerItemViewController.h; sourceTree = "<group>"; };
-		5D0984A117BC5981008D7F0D /* AddDinerItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDinerItemViewController.m; sourceTree = "<group>"; };
-		5D0984A217BC5981008D7F0D /* AddSharedItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSharedItemViewController.h; sourceTree = "<group>"; };
-		5D0984A317BC5981008D7F0D /* AddSharedItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSharedItemViewController.m; sourceTree = "<group>"; };
-		5D0984A417BC5981008D7F0D /* AnySharedItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnySharedItemsViewController.h; sourceTree = "<group>"; };
-		5D0984A517BC5981008D7F0D /* AnySharedItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnySharedItemsViewController.m; sourceTree = "<group>"; };
-		5D0984A617BC5981008D7F0D /* DinerItemsReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DinerItemsReviewViewController.h; sourceTree = "<group>"; };
-		5D0984A717BC5981008D7F0D /* DinerItemsReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DinerItemsReviewViewController.m; sourceTree = "<group>"; };
-		5D0984A817BC5981008D7F0D /* EvenlySplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvenlySplitViewController.h; sourceTree = "<group>"; };
-		5D0984A917BC5981008D7F0D /* EvenlySplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvenlySplitViewController.m; sourceTree = "<group>"; };
-		5D0984AA17BC5981008D7F0D /* SharedItemsReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedItemsReviewViewController.h; sourceTree = "<group>"; };
-		5D0984AB17BC5981008D7F0D /* SharedItemsReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedItemsReviewViewController.m; sourceTree = "<group>"; };
 		5D0984AC17BC5981008D7F0D /* TotalAmountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalAmountViewController.h; sourceTree = "<group>"; };
 		5D0984AD17BC5981008D7F0D /* TotalAmountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalAmountViewController.m; sourceTree = "<group>"; };
 		5D0984AF17BC5981008D7F0D /* UIRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedButton.h; sourceTree = "<group>"; };
@@ -68,6 +56,8 @@
 		5D0984B417BC5981008D7F0D /* UIRoundedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedLabel.m; sourceTree = "<group>"; };
 		5D0984B517BC5981008D7F0D /* UIRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRoundedView.h; sourceTree = "<group>"; };
 		5D0984B617BC5981008D7F0D /* UIRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRoundedView.m; sourceTree = "<group>"; };
+		5D0984CA17C2FBC9008D7F0D /* DinerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DinerInfo.h; sourceTree = "<group>"; };
+		5D0984CB17C2FBC9008D7F0D /* DinerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DinerInfo.m; sourceTree = "<group>"; };
 		5D1900421698D3A800C0D335 /* SplitMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1900461698D3A800C0D335 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5D1900481698D3A800C0D335 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +73,16 @@
 		5D1900791698DA4500C0D335 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D19007A1698DA4500C0D335 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5D19007F1698DCEE00C0D335 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		5D7A26A517C2FEED00F4E66A /* OverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewViewController.h; sourceTree = "<group>"; };
+		5D7A26A617C2FEED00F4E66A /* OverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewViewController.m; sourceTree = "<group>"; };
+		5D7A26A817C307A300F4E66A /* DinerItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DinerItemViewController.h; sourceTree = "<group>"; };
+		5D7A26A917C307A300F4E66A /* DinerItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DinerItemViewController.m; sourceTree = "<group>"; };
+		5D7A26AB17C30FC800F4E66A /* DinerReadyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DinerReadyViewController.h; sourceTree = "<group>"; };
+		5D7A26AC17C30FC800F4E66A /* DinerReadyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DinerReadyViewController.m; sourceTree = "<group>"; };
+		5D7A26AE17C3147F00F4E66A /* UIPriceTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPriceTextField.h; sourceTree = "<group>"; };
+		5D7A26AF17C3147F00F4E66A /* UIPriceTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPriceTextField.m; sourceTree = "<group>"; };
+		5D7A26B117C31A7B00F4E66A /* UIPriceTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPriceTextFieldDelegate.h; sourceTree = "<group>"; };
+		5D7A26B217C31A7B00F4E66A /* UIPriceTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPriceTextFieldDelegate.m; sourceTree = "<group>"; };
 		B26C530CD6654422B09089AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70BC8CEF1344BC69AF44F41 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -107,6 +107,8 @@
 			children = (
 				5D09849C17BC5981008D7F0D /* SessionDataController.h */,
 				5D09849D17BC5981008D7F0D /* SessionDataController.m */,
+				5D0984CA17C2FBC9008D7F0D /* DinerInfo.h */,
+				5D0984CB17C2FBC9008D7F0D /* DinerInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,20 +123,14 @@
 		5D09849F17BC5981008D7F0D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5D0984A017BC5981008D7F0D /* AddDinerItemViewController.h */,
-				5D0984A117BC5981008D7F0D /* AddDinerItemViewController.m */,
-				5D0984A217BC5981008D7F0D /* AddSharedItemViewController.h */,
-				5D0984A317BC5981008D7F0D /* AddSharedItemViewController.m */,
-				5D0984A417BC5981008D7F0D /* AnySharedItemsViewController.h */,
-				5D0984A517BC5981008D7F0D /* AnySharedItemsViewController.m */,
-				5D0984A617BC5981008D7F0D /* DinerItemsReviewViewController.h */,
-				5D0984A717BC5981008D7F0D /* DinerItemsReviewViewController.m */,
-				5D0984A817BC5981008D7F0D /* EvenlySplitViewController.h */,
-				5D0984A917BC5981008D7F0D /* EvenlySplitViewController.m */,
-				5D0984AA17BC5981008D7F0D /* SharedItemsReviewViewController.h */,
-				5D0984AB17BC5981008D7F0D /* SharedItemsReviewViewController.m */,
 				5D0984AC17BC5981008D7F0D /* TotalAmountViewController.h */,
 				5D0984AD17BC5981008D7F0D /* TotalAmountViewController.m */,
+				5D7A26A517C2FEED00F4E66A /* OverviewViewController.h */,
+				5D7A26A617C2FEED00F4E66A /* OverviewViewController.m */,
+				5D7A26A817C307A300F4E66A /* DinerItemViewController.h */,
+				5D7A26A917C307A300F4E66A /* DinerItemViewController.m */,
+				5D7A26AB17C30FC800F4E66A /* DinerReadyViewController.h */,
+				5D7A26AC17C30FC800F4E66A /* DinerReadyViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -150,6 +146,10 @@
 				5D0984B417BC5981008D7F0D /* UIRoundedLabel.m */,
 				5D0984B517BC5981008D7F0D /* UIRoundedView.h */,
 				5D0984B617BC5981008D7F0D /* UIRoundedView.m */,
+				5D7A26AE17C3147F00F4E66A /* UIPriceTextField.h */,
+				5D7A26AF17C3147F00F4E66A /* UIPriceTextField.m */,
+				5D7A26B117C31A7B00F4E66A /* UIPriceTextFieldDelegate.h */,
+				5D7A26B217C31A7B00F4E66A /* UIPriceTextFieldDelegate.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,17 +335,17 @@
 				5D1900531698D3A800C0D335 /* main.m in Sources */,
 				5D19007D1698DA4500C0D335 /* AppDelegate.m in Sources */,
 				5D0984B717BC5981008D7F0D /* SessionDataController.m in Sources */,
-				5D0984B817BC5981008D7F0D /* AddDinerItemViewController.m in Sources */,
-				5D0984B917BC5981008D7F0D /* AddSharedItemViewController.m in Sources */,
-				5D0984BA17BC5981008D7F0D /* AnySharedItemsViewController.m in Sources */,
-				5D0984BB17BC5981008D7F0D /* DinerItemsReviewViewController.m in Sources */,
-				5D0984BC17BC5981008D7F0D /* EvenlySplitViewController.m in Sources */,
-				5D0984BD17BC5981008D7F0D /* SharedItemsReviewViewController.m in Sources */,
 				5D0984BE17BC5981008D7F0D /* TotalAmountViewController.m in Sources */,
 				5D0984BF17BC5981008D7F0D /* UIRoundedButton.m in Sources */,
 				5D0984C017BC5981008D7F0D /* UIRoundedImageView.m in Sources */,
 				5D0984C117BC5981008D7F0D /* UIRoundedLabel.m in Sources */,
 				5D0984C217BC5981008D7F0D /* UIRoundedView.m in Sources */,
+				5D0984CC17C2FBC9008D7F0D /* DinerInfo.m in Sources */,
+				5D7A26A717C2FEED00F4E66A /* OverviewViewController.m in Sources */,
+				5D7A26AA17C307A300F4E66A /* DinerItemViewController.m in Sources */,
+				5D7A26AD17C30FC800F4E66A /* DinerReadyViewController.m in Sources */,
+				5D7A26B017C3148000F4E66A /* UIPriceTextField.m in Sources */,
+				5D7A26B317C31A7B00F4E66A /* UIPriceTextFieldDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

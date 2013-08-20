@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="erR-5a-Lhc">
-                                <rect key="frame" x="46" y="305" width="228" height="85"/>
+                                <rect key="frame" x="46" y="304" width="228" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="40"/>
                                 <state key="normal" title="new session">
@@ -43,11 +43,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="dQP-Z5-39c">
-                                <rect key="frame" x="0.0" y="0.0" width="326" height="230"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="split.me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uMx-ra-beC">
-                                        <rect key="frame" x="23" y="80" width="280" height="69"/>
+                                        <rect key="frame" x="20" y="80" width="280" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="70"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,7 +117,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KdT-hw-slD" kind="push" identifier="segueAfterTotalAmount" id="1ZP-IA-iDa"/>
+                                    <action selector="buttonStartClicked:" destination="aZf-Yt-uas" eventType="touchUpInside" id="g9z-VX-oqt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BN1-Av-Rkh">
@@ -222,6 +222,110 @@
             </objects>
             <point key="canvasLocation" x="549" y="180"/>
         </scene>
+        <!--Overview View Controller-->
+        <scene sceneID="qrV-Pn-Tkh">
+            <objects>
+                <viewController storyboardIdentifier="OverviewViewController" id="FKf-53-l2a" customClass="OverviewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="REj-Xd-1g0">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9GO-rH-h0o">
+                                <rect key="frame" x="0.0" y="60" width="320" height="400"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellTotal" id="vOp-HC-pn6">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5 diners, $100.25 total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y9u-zw-F3z">
+                                                    <rect key="frame" x="20" y="5" width="260" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="22"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellShared" id="Pv0-eT-Pv2">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="no shared items" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kLO-V3-I31">
+                                                    <rect key="frame" x="20" y="11" width="260" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellDiner" id="weA-4W-5YE">
+                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Diner One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1VR-SN-0YE">
+                                                    <rect key="frame" x="20" y="0.0" width="146" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville-SemiBoldItalic" family="Baskerville" pointSize="20"/>
+                                                    <color key="textColor" red="0.43921568630000002" green="0.12549019610000001" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1 item, $25.36 total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YY4-Cc-UXV">
+                                                    <rect key="frame" x="20" y="25" width="146" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="10"/>
+                                                    <color key="textColor" red="0.43921568630000002" green="0.12549019610000001" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FKf-53-l2a" id="YtQ-pG-kEG"/>
+                                    <outlet property="delegate" destination="FKf-53-l2a" id="ZKj-4W-ZsE"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="2gu-IO-Z2N">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UX0-76-gB6">
+                                        <rect key="frame" x="23" y="8" width="280" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xul-vH-APq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsR-lU-fhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="789"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="zqv-v8-Td1">
             <objects>
@@ -303,10 +407,10 @@
             </objects>
             <point key="canvasLocation" x="1822" y="180"/>
         </scene>
-        <!--View Controller-->
+        <!--Diner Ready View Controller-->
         <scene sceneID="1ci-ML-d3c">
             <objects>
-                <viewController id="KdT-hw-slD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DinerReadyViewController" id="KdT-hw-slD" customClass="DinerReadyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p4W-f8-Tkh">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -326,7 +430,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mI8-Fv-TDH">
-                                <rect key="frame" x="60" y="280" width="200" height="60"/>
+                                <rect key="frame" x="60" y="303" width="200" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="30"/>
                                 <state key="normal" title="ready">
@@ -337,21 +441,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7bQ-yk-BVc" kind="push" id="2Nh-3Z-ZaQ"/>
+                                    <segue destination="7bQ-yk-BVc" kind="push" identifier="SegueAfterDinerReady" id="7sl-bb-fcu"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sgi-B8-uLH">
-                                <rect key="frame" x="20" y="396" width="90" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="15"/>
-                                <state key="normal" title="&lt; back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Diner One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J0R-bo-dYT">
                                 <rect key="frame" x="0.0" y="114" width="320" height="73"/>
@@ -365,15 +456,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Oil-Ni-sLI"/>
+                    <connections>
+                        <outlet property="labelDinerName" destination="J0R-bo-dYT" id="ZrX-Zx-6eB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ao3-4C-cWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="995" y="180"/>
         </scene>
-        <!--View Controller-->
+        <!--Diner Item View Controller-->
         <scene sceneID="SSb-G4-DQ0">
             <objects>
-                <viewController id="7bQ-yk-BVc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DinerItemViewController" id="7bQ-yk-BVc" customClass="DinerItemViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SN3-2z-Iha">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -468,6 +562,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonBackClicked:" destination="7bQ-yk-BVc" eventType="touchUpInside" id="vDn-qc-jeg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YuH-Ex-3gI">
                                 <rect key="frame" x="210" y="338" width="90" height="44"/>
@@ -481,8 +578,11 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonNextItemClicked:" destination="7bQ-yk-BVc" eventType="touchUpInside" id="KsP-jF-Q6B"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$7.75" borderStyle="bezel" textAlignment="center" minimumFontSize="17" id="NlP-Ei-MEp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$7.75" borderStyle="bezel" textAlignment="center" minimumFontSize="17" id="NlP-Ei-MEp" customClass="UIPriceTextField">
                                 <rect key="frame" x="80" y="102" width="161" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -509,6 +609,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="buttonDoneClicked:" destination="7bQ-yk-BVc" eventType="touchUpInside" id="w8z-bm-RaA"/>
                                     <segue destination="9I6-dc-lg3" kind="push" id="PAV-k9-Xtm"/>
                                 </connections>
                             </button>
@@ -544,6 +645,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="fao-VG-BR3"/>
+                    <connections>
+                        <outlet property="fieldItemAmount" destination="NlP-Ei-MEp" id="tw6-dp-Dee"/>
+                        <outlet property="labelDinerName" destination="RKl-nq-Jjt" id="JaO-hX-hGa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lB3-4Y-gjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1040,7 +1145,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Diner One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m7F-Hn-6Wp">
-                                                <rect key="frame" x="14" y="7" width="146" height="29"/>
+                                                <rect key="frame" x="14" y="1" width="146" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Baskerville-SemiBoldItalic" family="Baskerville" pointSize="20"/>
                                                 <color key="textColor" red="0.43921568630000002" green="0.12549019610000001" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>

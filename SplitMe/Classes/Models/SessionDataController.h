@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DinerInfo.h"
 
 #define MAX_DINER 20
 
@@ -16,5 +17,8 @@
 
 @property NSUInteger dinerCount;
 @property NSUInteger totalAmountDecimal2;
+@property (nonatomic, copy) NSArray *diners;
+
+- (void)beginSession;
 
 @end
