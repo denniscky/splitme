@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelDinerName;
 @property (weak, nonatomic) IBOutlet UIPriceTextField *fieldItemAmount;
 @property (weak, nonatomic) DinerInfo *diner;
+@property (weak, nonatomic) IBOutlet UIButton *buttonDone;
 
 @end

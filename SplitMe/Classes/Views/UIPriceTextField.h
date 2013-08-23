@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIPriceTextField : UITextField <UITextFieldDelegate>
+@interface UIPriceTextField : UITextField
 
+- (void)setExternalDelegate:(id<UITextFieldDelegate>)externalDelegate;
 - (void)setPriceDecimal2:(NSInteger)price;
 - (NSInteger)getPriceDecimal2;
 

@@ -38,22 +38,27 @@
     if ([previous isKindOfClass:[DinerItemViewController class]]) {
         self.isFirstItem = YES;
     }
+    
+    self.buttonDone.alpha = 0.0;
     self.labelDinerName.text = self.diner.name;
     [self.fieldItemAmount setPriceDecimal2:0];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     // Keyboard stuff
     // If we want keybaord to show up on load
     [self.fieldItemAmount becomeFirstResponder];
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(keyboardWillShow:)
-//                                                 name:UIKeyboardWillShowNotification
-//                                               object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(keyboardDidShow:)
-//                                                 name:UIKeyboardDidShowNotification
-//                                               object:nil];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -73,6 +78,7 @@
 - (void)viewDidUnload {
     [self setLabelDinerName:nil];
     [self setFieldItemAmount:nil];
+    [self setButtonDone:nil];
     [super viewDidUnload];
 }
 
@@ -103,17 +109,35 @@
 }
 
 - (IBAction)buttonDoneClicked:(id)sender {
+    [self.fieldItemAmount resignFirstResponder];
 }
 
 //////////////////////////
 // Notification methods //
 //////////////////////////
-//- (void)keyboardWillShow:(NSNotification *)notification {
-//    [UIView setAnimationsEnabled:NO]; // For showing a textField on load
-//}
-//
-//- (void)keyboardDidShow:(NSNotification *)notification {
-//    [UIView setAnimationsEnabled:YES]; // For showing a textField on load
-//}
+- (void)keyboardWillShow:(NSNotification *)notification {
+    NSLog(@"keyboardWillShow");
+    NSDictionary* info = [notification userInfo];
+    NSValue* value = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval duration = 0;
+    [value getValue:&duration];
+    [UIView animateWithDuration:duration animations:^{
+        self.buttonDone.alpha = 1.0;
+    }];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    NSLog(@"keyboardWillHide totlaAmount");
+    NSDictionary* info = [notification userInfo];
+    NSValue* value = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval duration = 0;
+    [value getValue:&duration];
+    [UIView animateWithDuration:duration animations:^{
+        self.buttonDone.alpha = 0.0;
+    }];
+    
+    [self.fieldItemAmount getPriceDecimal2];
+   // [self refreshAllLabels];
+}
 
 @end

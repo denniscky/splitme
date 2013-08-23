@@ -9,25 +9,35 @@
 #import "UIPriceTextField.h"
 #import "UIPriceTextFieldDelegate.h"
 
+@interface UIPriceTextField ()
+
+// Need this redundant property to retain the delegate
+@property (strong, nonatomic) UIPriceTextFieldDelegate *internalDelegate;
+
+@end
+
 @implementation UIPriceTextField
 
+///////////////////////
+// Inherited methods //
+///////////////////////
 - (id)initWithCoder:(NSCoder *)aDecoder {
-    NSLog(@"initWithCoder");
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Initialization code
-        [super setDelegate: [[UIPriceTextFieldDelegate alloc] init]];
+        self.internalDelegate = [[UIPriceTextFieldDelegate alloc] init];
+        self.delegate = self.internalDelegate;
     }
     return self;
 }
 
 - (id)initWithFrame:(CGRect)frame
 {
-    NSLog(@"Initwithframe");
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        [super setDelegate: [[UIPriceTextFieldDelegate alloc] init]];
+        self.internalDelegate = [[UIPriceTextFieldDelegate alloc] init];
+        [super setDelegate:self.internalDelegate];
     }
     return self;
 }
@@ -41,73 +51,24 @@
 }
  */
 
-- (void)refreshDisplay:(NSInteger)price {
-    self.text = [self numberToPriceString:price doPadZero:self.editing];
+- (void)dealloc {
+    self.internalDelegate = nil;
+}
+
+////////////////////
+// Helper methods //
+////////////////////
+- (void)setExternalDelegate:(id<UITextFieldDelegate>)externalDelegate {
+    NSLog(@"setExternalDelegate");
+    self.internalDelegate.delegate = externalDelegate;
 }
 
 - (void)setPriceDecimal2:(NSInteger)price {
-    [self refreshDisplay:price];
+    self.text = [self.internalDelegate numberToPriceString:price doPadZero:!self.editing];
 }
 
 - (NSInteger)getPriceDecimal2 {
-    NSString *justNumbers = [self.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
-    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@"." withString:@""];
-    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@" " withString:@""];
-    return [justNumbers intValue];
-}
-
-//- (NSInteger)priceDecimal2 {
-//    NSString *justNumbers = [self.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
-//    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@"." withString:@""];
-//    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@" " withString:@""];
-//    return [justNumbers intValue];
-//}
-
-- (NSString *)numberToPriceString:(NSUInteger)number doPadZero:(BOOL)doPadZero {
-    NSString *numberString = number == 0 ? @"" : [NSString stringWithFormat:@"%d", number];
-    return [self numberStringToPriceString:numberString doPadZero:doPadZero];
-}
-
-- (NSString *)numberStringToPriceString:(NSString *)numberString doPadZero:(BOOL)doPadZero {
-    NSMutableString *result = [NSMutableString stringWithString:numberString];
-    while (result.length < 3) {
-        doPadZero ? [result insertString:@"0" atIndex:0] : [result insertString:@" " atIndex:0];
-    }
-    [result insertString:@"$" atIndex:0];
-    [result insertString:@"." atIndex:result.length-2];
-    return result;
-}
-
-//////////////////////
-// Delegate methods //
-//////////////////////
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)addedString
-{
-    NSLog(@"shouldChangeCharactersInRange |%@| %d %d |%@|", textField.text, range.length, range.location, addedString);
-    
-    NSString *justNumbers = [textField.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
-    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@"." withString:@""];
-    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if ([addedString isEqualToString:@""]) {
-        if (justNumbers.length > 0) {
-            justNumbers = [justNumbers substringToIndex:justNumbers.length-1];
-        }
-    }
-    else {
-        justNumbers = [justNumbers stringByAppendingString:addedString];
-    }
-    
-    textField.text = [self numberStringToPriceString:justNumbers doPadZero:NO];
-    
-    return NO;
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self refreshDisplay:[self getPriceDecimal2]];
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    [self refreshDisplay:[self getPriceDecimal2]];
+    return [self.internalDelegate getPriceDecimal2:self];
 }
 
 @end

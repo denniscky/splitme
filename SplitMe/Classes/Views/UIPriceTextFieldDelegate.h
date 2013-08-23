@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UIPriceTextFieldDelegate : UITextField <UITextFieldDelegate>
+@interface UIPriceTextFieldDelegate : NSObject <UITextFieldDelegate>
+
+@property (weak, nonatomic) id<UITextFieldDelegate> delegate;
+
+- (NSString *)numberToPriceString:(NSUInteger)number doPadZero:(BOOL)doPadZero;
+- (NSString *)numberStringToPriceString:(NSString *)numberString doPadZero:(BOOL)doPadZero;
+- (NSInteger)getPriceDecimal2:(UITextField *)textField;
 
 @end
