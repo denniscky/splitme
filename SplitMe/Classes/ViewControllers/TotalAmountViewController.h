@@ -10,13 +10,13 @@
 
 @interface TotalAmountViewController : UIViewController <UITextFieldDelegate>
 
+@property NSUInteger dinerCount;
+@property NSUInteger totalAmountDecimal2;
+
 @property (weak, nonatomic) IBOutlet UITextField *fieldTotalAmount;
 @property (weak, nonatomic) IBOutlet UILabel *labelDinerCount;
 @property (weak, nonatomic) IBOutlet UIButton *buttonNext;
 @property (weak, nonatomic) IBOutlet UIButton *buttonBack;
 @property (weak, nonatomic) IBOutlet UIButton *buttonDone;
-
-@property NSUInteger dinerCount;
-@property NSUInteger totalAmountDecimal2;
 
 @end

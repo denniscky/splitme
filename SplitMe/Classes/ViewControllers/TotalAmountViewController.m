@@ -148,7 +148,6 @@
 // Notification methods //
 //////////////////////////
 - (void)keyboardWillShow:(NSNotification *)notification {
-    NSLog(@"keyboardWillShow totlaAmount");
     //[UIView setAnimationsEnabled:NO]; // For showing a textField on load
     
     // Keeping this in case we need example code later
@@ -182,7 +181,6 @@
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
-    NSLog(@"keyboardWillHide totlaAmount");
     NSDictionary* info = [notification userInfo];
     NSValue* value = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
     NSTimeInterval duration = 0;

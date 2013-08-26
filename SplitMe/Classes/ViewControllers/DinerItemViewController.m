@@ -9,6 +9,8 @@
 #import "DinerItemViewController.h"
 #import "OverviewViewController.h"
 
+#define kBorderWidth 4
+
 @interface DinerItemViewController ()
 
 @property BOOL isFirstItem;
@@ -33,6 +35,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.diner print];
+    
     UIViewController *previous = [self.navigationController.viewControllers objectAtIndex:(self.navigationController.viewControllers.count - 2)];
     self.isFirstItem = NO;
     if ([previous isKindOfClass:[DinerItemViewController class]]) {
@@ -40,8 +44,6 @@
     }
     
     self.buttonDone.alpha = 0.0;
-    self.labelDinerName.text = self.diner.name;
-    [self.fieldItemAmount setPriceDecimal2:0];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
@@ -51,7 +53,11 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-
+    
+    self.currentType = APPETIZER;
+    self.labelDinerName.text = self.diner.name;
+    [self.fieldItemAmount setPriceDecimal2:0];
+    [self refreshUIElements];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -79,6 +85,10 @@
     [self setLabelDinerName:nil];
     [self setFieldItemAmount:nil];
     [self setButtonDone:nil];
+    [self setButtonAppetizer:nil];
+    [self setButtonEntree:nil];
+    [self setButtonDessert:nil];
+    [self setButtonDrink:nil];
     [super viewDidUnload];
 }
 
@@ -86,8 +96,17 @@
 // IBAction methods //
 //////////////////////
 - (IBAction)buttonNextItemClicked:(id)sender {
+    DinerItem *newItem = [[DinerItem alloc] init];
+    newItem.priceDecimal2 = [self.fieldItemAmount getPriceDecimal2];
+    newItem.type = self.currentType;
+    
+   // [self.diner addDinerItem:newItem];
+    [self.diner.items addObject:newItem];
+    NSLog(@"current count = %d", self.diner.items.count);
+    
     UIStoryboard *storyboard = self.storyboard;
     DinerItemViewController *nextItem = [storyboard instantiateViewControllerWithIdentifier:@"DinerItemViewController"];
+    nextItem.diner = self.diner;
     
     [self.navigationController pushViewController:nextItem animated:YES];
 }
@@ -112,11 +131,26 @@
     [self.fieldItemAmount resignFirstResponder];
 }
 
+- (IBAction)buttonTypeClicked:(id)sender {
+    self.currentType = ((UIButton *)sender).tag;
+    [self refreshUIElements];
+}
+
+
+////////////////////
+// Helper methods //
+////////////////////
+- (void)refreshUIElements {
+    self.buttonAppetizer.border = self.currentType == APPETIZER ? kBorderWidth : 0;
+    self.buttonEntree.border = self.currentType == ENTREE ? kBorderWidth : 0;
+    self.buttonDessert.border = self.currentType == DESSERT ? kBorderWidth : 0;
+    self.buttonDrink.border = self.currentType == DRINK ? kBorderWidth : 0;
+}
+
 //////////////////////////
 // Notification methods //
 //////////////////////////
 - (void)keyboardWillShow:(NSNotification *)notification {
-    NSLog(@"keyboardWillShow");
     NSDictionary* info = [notification userInfo];
     NSValue* value = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
     NSTimeInterval duration = 0;
@@ -127,7 +161,6 @@
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
-    NSLog(@"keyboardWillHide totlaAmount");
     NSDictionary* info = [notification userInfo];
     NSValue* value = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
     NSTimeInterval duration = 0;
@@ -135,9 +168,6 @@
     [UIView animateWithDuration:duration animations:^{
         self.buttonDone.alpha = 0.0;
     }];
-    
-    [self.fieldItemAmount getPriceDecimal2];
-   // [self refreshAllLabels];
 }
 
 @end

@@ -28,7 +28,7 @@ static SessionDataController *sharedInstance = nil;
     NSAssert(self.dinerCount > 0, @"Diner count is not a positive number");
     NSMutableArray *diners = [NSMutableArray arrayWithCapacity:self.dinerCount];
     for (NSUInteger i = 0; i < self.dinerCount; i++) {
-        [diners addObject:[[DinerInfo alloc] initWithNumber:i+1]];
+        [diners addObject:[[DinerInfo alloc] initWithDinerNumber:i+1]];
     }
     self.diners = diners;
     for (DinerInfo *diner in self.diners) {

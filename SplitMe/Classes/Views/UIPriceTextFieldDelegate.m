@@ -45,7 +45,7 @@
 //////////////////////
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)addedString
 {
-    NSLog(@"shouldChangeCharactersInRange |%@| %d %d |%@|", textField.text, range.length, range.location, addedString);
+   // NSLog(@"shouldChangeCharactersInRange |%@| %d %d |%@|", textField.text, range.length, range.location, addedString);
     
     NSString *justNumbers = [textField.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
     justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@"." withString:@""];
@@ -65,21 +65,21 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    NSLog(@"textFieldDidBeginEditing");
+    //NSLog(@"textFieldDidBeginEditing");
     [self refreshPriceTextField:textField];
     if ([self.delegate respondsToSelector:@selector(textFieldDidBeginEditing:)])
         [self.delegate textFieldDidBeginEditing:textField];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    NSLog(@"textFieldDidEndEditing");
+    //NSLog(@"textFieldDidEndEditing");
     [self refreshPriceTextField:textField];
     if ([self.delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
         [self.delegate textFieldDidEndEditing:textField];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    NSLog(@"textFieldShouldBeginEditing %d", [self.delegate respondsToSelector:@selector(textFieldShouldBeginEditing:)]);
+    //NSLog(@"textFieldShouldBeginEditing %d", [self.delegate respondsToSelector:@selector(textFieldShouldBeginEditing:)]);
     if ([self.delegate respondsToSelector:@selector(textFieldShouldBeginEditing:)])
         return [self.delegate textFieldShouldBeginEditing:textField];
     else
@@ -87,7 +87,7 @@
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
-    NSLog(@"textFieldShouldClear");
+    //NSLog(@"textFieldShouldClear");
     if ([self.delegate respondsToSelector:@selector(textFieldShouldClear:)])
         return [self.delegate textFieldShouldClear:textField];
     else
@@ -95,7 +95,7 @@
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    NSLog(@"textFieldShouldEndEditing");
+    //NSLog(@"textFieldShouldEndEditing");
     if ([self.delegate respondsToSelector:@selector(textFieldShouldEndEditing:)])
         return [self.delegate textFieldShouldEndEditing:textField];
     else
@@ -103,7 +103,7 @@
 
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"textFieldShouldReturn");
+    //NSLog(@"textFieldShouldReturn");
     if ([self.delegate respondsToSelector:@selector(textFieldShouldReturn:)])
         return [self.delegate textFieldShouldReturn:textField];
     else

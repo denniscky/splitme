@@ -10,4 +10,7 @@
 
 @interface UIRoundedButton : UIButton
 
+@property NSInteger border;
+@property (nonatomic, strong) UIColor *borderColor;
+
 @end

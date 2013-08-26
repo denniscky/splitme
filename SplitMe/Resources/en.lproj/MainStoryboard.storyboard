@@ -498,7 +498,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.43769797682762146" green="0.12706977128982544" blue="0.34956470131874084" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Fg-vn-MnO">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Fg-vn-MnO" customClass="UIBorderedButton">
                                 <rect key="frame" x="20" y="166" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9397120475769043" green="1" blue="0.93602067232131958" alpha="1" colorSpace="calibratedRGB"/>
@@ -510,8 +510,11 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTypeClicked:" destination="7bQ-yk-BVc" eventType="touchUpInside" id="o1V-53-EYE"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rch-Xl-Vs2">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rch-Xl-Vs2" customClass="UIBorderedButton">
                                 <rect key="frame" x="240" y="166" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99781012535095215" green="0.93486702442169189" blue="0.9720451831817627" alpha="1" colorSpace="calibratedRGB"/>
@@ -523,8 +526,11 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTypeClicked:" destination="7bQ-yk-BVc" eventType="touchUpInside" id="S1T-W0-oXy"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ysJ-8Q-HGH">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ysJ-8Q-HGH" customClass="UIBorderedButton">
                                 <rect key="frame" x="166" y="166" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9960131049156189" green="1" blue="0.93070870637893677" alpha="1" colorSpace="calibratedRGB"/>
@@ -536,8 +542,11 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTypeClicked:" destination="7bQ-yk-BVc" eventType="touchUpInside" id="E2b-bA-ukn"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0NL-sc-iWg">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0NL-sc-iWg" customClass="UIBorderedButton">
                                 <rect key="frame" x="95" y="166" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9355461597442627" green="0.94712203741073608" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -549,6 +558,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTypeClicked:" destination="7bQ-yk-BVc" eventType="touchUpInside" id="Mh6-Wa-6Xj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dgU-Oe-aNR">
                                 <rect key="frame" x="20" y="396" width="90" height="44"/>
@@ -660,7 +672,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="fao-VG-BR3"/>
                     <connections>
+                        <outlet property="buttonAppetizer" destination="2Fg-vn-MnO" id="gdR-gn-Wq3"/>
+                        <outlet property="buttonDessert" destination="ysJ-8Q-HGH" id="CuL-Qj-iev"/>
                         <outlet property="buttonDone" destination="90e-RS-Rbj" id="sxE-hB-NPK"/>
+                        <outlet property="buttonDrink" destination="rch-Xl-Vs2" id="NNY-Yf-hnK"/>
+                        <outlet property="buttonEntree" destination="0NL-sc-iWg" id="by6-hS-QhX"/>
                         <outlet property="fieldItemAmount" destination="NlP-Ei-MEp" id="tw6-dp-Dee"/>
                         <outlet property="labelDinerName" destination="RKl-nq-Jjt" id="JaO-hX-hGa"/>
                     </connections>
@@ -1311,7 +1327,12 @@
                 <relationship kind="action" name="buttonBackClicked:"/>
                 <relationship kind="action" name="buttonDoneClicked:"/>
                 <relationship kind="action" name="buttonNextItemClicked:"/>
+                <relationship kind="action" name="buttonTypeClicked:"/>
+                <relationship kind="outlet" name="buttonAppetizer" candidateClass="UIBorderedButton"/>
+                <relationship kind="outlet" name="buttonDessert" candidateClass="UIBorderedButton"/>
                 <relationship kind="outlet" name="buttonDone" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonDrink" candidateClass="UIBorderedButton"/>
+                <relationship kind="outlet" name="buttonEntree" candidateClass="UIBorderedButton"/>
                 <relationship kind="outlet" name="fieldItemAmount" candidateClass="UIPriceTextField"/>
                 <relationship kind="outlet" name="labelDinerName" candidateClass="UILabel"/>
             </relationships>
@@ -1328,12 +1349,20 @@
         <class className="TotalAmountViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TotalAmountViewController.h"/>
             <relationships>
+                <relationship kind="action" name="buttonBackClicked:"/>
+                <relationship kind="action" name="buttonDecrementDinerClicked:"/>
+                <relationship kind="action" name="buttonDoneClicked:"/>
+                <relationship kind="action" name="buttonIncrementDinerClicked:"/>
+                <relationship kind="action" name="buttonStartClicked:"/>
                 <relationship kind="outlet" name="buttonBack" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonDone" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonNext" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="fieldTotalAmount" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="labelDinerCount" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="UIBorderedButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIBorderedButton.h"/>
         </class>
         <class className="UIPriceTextField" superclassName="UITextField">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIPriceTextField.h"/>

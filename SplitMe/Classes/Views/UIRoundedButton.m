@@ -29,6 +29,25 @@
         radius = self.tag;
     }    
     [self.layer setCornerRadius:radius];
+    if (self.border > 0) {
+        if (self.borderColor) {
+            self.layer.borderColor = self.borderColor.CGColor;
+        }
+        else {
+            self.layer.borderColor = [UIColor colorWithRed:189.0/255.0 green:193.0/255.0 blue:197.0/255.0 alpha:1.0].CGColor;
+        }
+        self.layer.borderWidth = self.border;
+    }
+}
+
+- (void)setBorder:(NSInteger)border {
+    NSLog(@"setBorder");
+    self.border = border;
+}
+
+- (NSInteger)border {
+    NSLog(@"border");
+    return self.border;
 }
 
 

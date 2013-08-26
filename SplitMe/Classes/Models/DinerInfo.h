@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#import "DinerItem.h"
+
 @interface DinerInfo : NSObject
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSArray *items;
+@property (nonatomic, copy) NSMutableArray *items;
 
-- (id)initWithNumber:(NSUInteger)number;
+- (id)initWithDinerNumber:(NSUInteger)number;
+//- (void)addDinerItem:(DinerItem *)item;
+- (void)print;
 
 @end
