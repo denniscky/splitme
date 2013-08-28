@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DinerInfo.h"
+#import "ItemInputAbstractViewController.h"
 
-@interface DinerReadyViewController : UIViewController
+@interface DinerReadyViewController : ItemInputAbstractViewController
 
 @property (weak, nonatomic) DinerInfo *diner;
 @property (weak, nonatomic) IBOutlet UILabel *labelDinerName;

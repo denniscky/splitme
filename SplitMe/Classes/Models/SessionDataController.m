@@ -31,8 +31,12 @@ static SessionDataController *sharedInstance = nil;
         [diners addObject:[[DinerInfo alloc] initWithDinerNumber:i+1]];
     }
     self.diners = diners;
+}
+
+- (void)print {
+    NSLog(@"Current Diners' info");
     for (DinerInfo *diner in self.diners) {
-        NSLog(@"%@", diner.name);
+        [diner print];
     }
 }
 

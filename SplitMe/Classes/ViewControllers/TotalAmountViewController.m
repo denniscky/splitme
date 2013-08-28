@@ -34,9 +34,8 @@
     
     self.buttonDone.alpha = 0.0;
     self.dinerCount = 0;
-    self.totalAmountDecimal2 = 0;
-    [self refreshAllLabels];
-    
+    [self.fieldTotalAmount setPriceDecimal2:0];
+    [self refreshUIElements];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,7 +84,7 @@
     }
     
     SessionDataController *session = [SessionDataController sharedInstance];
-    session.totalAmountDecimal2 = self.totalAmountDecimal2;
+    session.totalAmountDecimal2 = [self.fieldTotalAmount getPriceDecimal2];
     session.dinerCount = self.dinerCount;
     [session beginSession];
     [self performSegueForDinerOne];
@@ -94,14 +93,14 @@
 - (IBAction)buttonIncrementDinerClicked:(id)sender {
     if (self.dinerCount < MAX_DINER) {
         self.dinerCount ++;
-        [self refreshAllLabels];
+        [self refreshUIElements];
     }
 }
 
 - (IBAction)buttonDecrementDinerClicked:(id)sender {
     if (self.dinerCount > 0) {
         self.dinerCount --;
-        [self refreshAllLabels];
+        [self refreshUIElements];
     }
 }
 
@@ -112,24 +111,8 @@
 ////////////////////
 // Helper methods //
 ////////////////////
-- (void)refreshAllLabels {
+- (void)refreshUIElements {
     self.labelDinerCount.text = [NSString stringWithFormat:@"%d", self.dinerCount];
-    self.fieldTotalAmount.text = [self numberToPriceString:self.totalAmountDecimal2 doPadZero:YES];
-}
-
-- (NSString *)numberToPriceString:(NSUInteger)number doPadZero:(BOOL)doPadZero {
-    NSString *numberString = number == 0 ? @"" : [NSString stringWithFormat:@"%d", number];
-    return [self numberStringToPriceString:numberString doPadZero:doPadZero];
-}
-
-- (NSString *)numberStringToPriceString:(NSString *)numberString doPadZero:(BOOL)doPadZero {
-    NSMutableString *result = [NSMutableString stringWithString:numberString];
-    while (result.length < 3) {
-        doPadZero ? [result insertString:@"0" atIndex:0] : [result insertString:@" " atIndex:0];
-    }
-    [result insertString:@"$" atIndex:0];
-    [result insertString:@"." atIndex:result.length-2];
-    return result;
 }
 
 - (void)performSegueForDinerOne {
@@ -175,7 +158,6 @@
         self.view.transform = CGAffineTransformMakeTranslation(0.0, -edgeOfDinerCount);
         self.buttonDone.alpha = 1.0;
     }];
-    self.fieldTotalAmount.text = [self numberToPriceString:self.totalAmountDecimal2 doPadZero:NO];
     self.buttonBack.hidden = YES;
     self.buttonNext.hidden = YES;
 }
@@ -195,32 +177,31 @@
     NSString *justNumbers = [self.fieldTotalAmount.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
     justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@"." withString:@""];
     justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@" " withString:@""];
-    self.totalAmountDecimal2 = [justNumbers intValue];
-    [self refreshAllLabels];
+    [self refreshUIElements];
 }
 
 //////////////////////
 // Delegate methods //
 //////////////////////
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)addedString
-{
-    //NSLog(@"shouldChangeCharactersInRange |%@| %d %d |%@|", textField.text, range.length, range.location, addedString);
-    
-    NSString *justNumbers = [textField.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
-    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@"." withString:@""];
-    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if ([addedString isEqualToString:@""]) {
-        if (justNumbers.length > 0) {
-            justNumbers = [justNumbers substringToIndex:justNumbers.length-1];
-        }
-    }
-    else {
-        justNumbers = [justNumbers stringByAppendingString:addedString];
-    }
-    
-    textField.text = [self numberStringToPriceString:justNumbers doPadZero:NO];
-    
-    return NO;
-}
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)addedString
+//{
+//    //NSLog(@"shouldChangeCharactersInRange |%@| %d %d |%@|", textField.text, range.length, range.location, addedString);
+//    
+//    NSString *justNumbers = [textField.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
+//    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@"." withString:@""];
+//    justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@" " withString:@""];
+//    if ([addedString isEqualToString:@""]) {
+//        if (justNumbers.length > 0) {
+//            justNumbers = [justNumbers substringToIndex:justNumbers.length-1];
+//        }
+//    }
+//    else {
+//        justNumbers = [justNumbers stringByAppendingString:addedString];
+//    }
+//    
+//    textField.text = [self numberStringToPriceString:justNumbers doPadZero:NO];
+//    
+//    return NO;
+//}
 
 @end

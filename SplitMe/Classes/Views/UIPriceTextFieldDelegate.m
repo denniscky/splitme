@@ -45,7 +45,7 @@
 //////////////////////
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)addedString
 {
-   // NSLog(@"shouldChangeCharactersInRange |%@| %d %d |%@|", textField.text, range.length, range.location, addedString);
+    //NSLog(@"shouldChangeCharactersInRange |%@| %d %d |%@|", textField.text, range.length, range.location, addedString);
     
     NSString *justNumbers = [textField.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
     justNumbers = [justNumbers stringByReplacingOccurrencesOfString:@"." withString:@""];

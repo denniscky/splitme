@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import "DinerItem.h"
+#import "FoodItem.h"
 
 @interface DinerInfo : NSObject
 
+@property NSUInteger number;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSMutableArray *items;
+@property (nonatomic, strong) UIColor *color;
 
 - (id)initWithDinerNumber:(NSUInteger)number;
 //- (void)addDinerItem:(DinerItem *)item;

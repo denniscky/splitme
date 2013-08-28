@@ -18,7 +18,9 @@
 @property NSUInteger dinerCount;
 @property NSUInteger totalAmountDecimal2;
 @property (nonatomic, copy) NSArray *diners;
+@property (nonatomic, copy) NSArray *sharedItems;
 
 - (void)beginSession;
+- (void)print;
 
 @end

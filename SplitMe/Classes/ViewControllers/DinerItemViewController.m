@@ -8,6 +8,8 @@
 
 #import "DinerItemViewController.h"
 #import "OverviewViewController.h"
+#import "SessionDataController.h"
+#import "DinerReadyViewController.h"
 
 #define kBorderWidth 4
 
@@ -35,14 +37,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.diner print];
+    //[self.diner print];
     
     UIViewController *previous = [self.navigationController.viewControllers objectAtIndex:(self.navigationController.viewControllers.count - 2)];
     self.isFirstItem = NO;
-    if ([previous isKindOfClass:[DinerItemViewController class]]) {
+    if ([previous isMemberOfClass:[DinerItemViewController class]]) {
         self.isFirstItem = YES;
     }
-    
+    self.viewDinerName.backgroundColor = self.diner.color;
+    self.buttonAppetizer.borderColor = self.diner.color; 
+    self.buttonEntree.borderColor = self.diner.color; 
+    self.buttonDessert.borderColor = self.diner.color; 
+    self.buttonDrink.borderColor = self.diner.color;
+    self.buttonFinished.backgroundColor = self.diner.color;
     self.buttonDone.alpha = 0.0;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -89,6 +96,8 @@
     [self setButtonEntree:nil];
     [self setButtonDessert:nil];
     [self setButtonDrink:nil];
+    [self setViewDinerName:nil];
+    [self setButtonFinished:nil];
     [super viewDidUnload];
 }
 
@@ -96,13 +105,7 @@
 // IBAction methods //
 //////////////////////
 - (IBAction)buttonNextItemClicked:(id)sender {
-    DinerItem *newItem = [[DinerItem alloc] init];
-    newItem.priceDecimal2 = [self.fieldItemAmount getPriceDecimal2];
-    newItem.type = self.currentType;
-    
-   // [self.diner addDinerItem:newItem];
-    [self.diner.items addObject:newItem];
-    NSLog(@"current count = %d", self.diner.items.count);
+    [self addCurrentItem];
     
     UIStoryboard *storyboard = self.storyboard;
     DinerItemViewController *nextItem = [storyboard instantiateViewControllerWithIdentifier:@"DinerItemViewController"];
@@ -119,7 +122,7 @@
     
     OverviewViewController *backToScreen;
     for (id item in self.navigationController.viewControllers) {
-        if ([item isKindOfClass:[OverviewViewController class]]) {
+        if ([item isMemberOfClass:[OverviewViewController class]]) {
             backToScreen = item;
             break;
         }
@@ -136,6 +139,16 @@
     [self refreshUIElements];
 }
 
+- (IBAction)buttonFinishedClicked:(id)sender {
+    [self addCurrentItem];
+    [[SessionDataController sharedInstance] print];
+    if (self.diner.number == [SessionDataController sharedInstance].dinerCount) {
+        [self jumpToSharedItems];
+    }
+    else {
+        [self jumpToNextDiner];
+    }
+}
 
 ////////////////////
 // Helper methods //
@@ -145,6 +158,48 @@
     self.buttonEntree.border = self.currentType == ENTREE ? kBorderWidth : 0;
     self.buttonDessert.border = self.currentType == DESSERT ? kBorderWidth : 0;
     self.buttonDrink.border = self.currentType == DRINK ? kBorderWidth : 0;
+}
+
+- (void)addCurrentItem {
+    FoodItem *newItem = [[FoodItem alloc] init];
+    newItem.priceDecimal2 = [self.fieldItemAmount getPriceDecimal2];
+    newItem.type = self.currentType;
+    [self.diner.items addObject:newItem];
+}
+
+- (void)jumpToSharedItems {
+    UIStoryboard *storyboard = self.storyboard;
+    UIViewController *sharedItemsQuestionScreen = [storyboard instantiateViewControllerWithIdentifier:@"SharedItemsQuestionViewController"];
+    
+    NSMutableArray *currentStack = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    while (currentStack.count > 1) {
+        [currentStack removeLastObject];
+        UIViewController *vc = [currentStack objectAtIndex:currentStack.count - 1];
+        if ([vc isMemberOfClass:[OverviewViewController class]]) {
+            break;
+        }
+    }
+    [currentStack addObject:sharedItemsQuestionScreen];
+    [self.navigationController setViewControllers:(NSArray *)currentStack animated:YES];
+}
+
+- (void)jumpToNextDiner {
+    UIStoryboard *storyboard = self.storyboard;
+    DinerReadyViewController *readyScreen = [storyboard instantiateViewControllerWithIdentifier:@"DinerReadyViewController"];
+    
+    // Note: diner.number starts from ONE
+    readyScreen.diner = [[SessionDataController sharedInstance].diners objectAtIndex:self.diner.number];
+    
+    NSMutableArray *currentStack = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    while (currentStack.count > 1) {
+        [currentStack removeLastObject];
+        UIViewController *vc = [currentStack objectAtIndex:currentStack.count - 1];
+        if ([vc isMemberOfClass:[OverviewViewController class]]) {
+            break;
+        }
+    }
+    [currentStack addObject:readyScreen];
+    [self.navigationController setViewControllers:(NSArray *)currentStack animated:YES];
 }
 
 //////////////////////////

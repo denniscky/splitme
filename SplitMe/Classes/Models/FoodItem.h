@@ -13,11 +13,11 @@ typedef enum {
     ENTREE = 2,
     DESSERT = 3,
     DRINK = 4
-} DinerItemType;
+} FoodItemType;
 
-@interface DinerItem : NSObject
+@interface FoodItem : NSObject
 
-@property DinerItemType type;
+@property FoodItemType type;
 @property NSUInteger priceDecimal2;
 
 - (void)print;

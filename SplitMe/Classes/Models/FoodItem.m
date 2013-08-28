@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Dennis Chan. All rights reserved.
 //
 
-#import "DinerItem.h"
+#import "FoodItem.h"
 
-@implementation DinerItem
+@implementation FoodItem
 
 - (void)print {
-    NSLog(@"  Type: %d, Amount: $%.02f", self.type, self.priceDecimal2 / 100.0);
+    NSLog(@"  $%.02f (type %d)", self.priceDecimal2 / 100.0, self.type);
 }
 
 @end

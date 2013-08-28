@@ -10,12 +10,12 @@
 #import "DinerInfo.h"
 #import "UIPriceTextField.h"
 #import "UIBorderedButton.h"
-#import "DinerItem.h"
+#import "FoodItem.h"
 
 @interface DinerItemViewController : UIViewController
 
 @property (weak, nonatomic) DinerInfo *diner;
-@property DinerItemType currentType;
+@property FoodItemType currentType;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelDinerName;
 @property (weak, nonatomic) IBOutlet UIPriceTextField *fieldItemAmount;
@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UIBorderedButton *buttonEntree;
 @property (weak, nonatomic) IBOutlet UIBorderedButton *buttonDessert;
 @property (weak, nonatomic) IBOutlet UIBorderedButton *buttonDrink;
+@property (weak, nonatomic) IBOutlet UIView *viewDinerName;
+@property (weak, nonatomic) IBOutlet UIButton *buttonFinished;
 
 
 @end

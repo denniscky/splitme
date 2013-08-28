@@ -36,7 +36,8 @@
 		5D7A26AD17C30FC800F4E66A /* DinerReadyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A26AC17C30FC800F4E66A /* DinerReadyViewController.m */; };
 		5D7A26B017C3148000F4E66A /* UIPriceTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A26AF17C3147F00F4E66A /* UIPriceTextField.m */; };
 		5D7A26B317C31A7B00F4E66A /* UIPriceTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A26B217C31A7B00F4E66A /* UIPriceTextFieldDelegate.m */; };
-		5D972EEF17CAFB4F009DEC1B /* DinerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D972EEE17CAFB4F009DEC1B /* DinerItem.m */; };
+		5D849EBF17CDB8C200E71A8A /* ItemInputAbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D849EBE17CDB8C200E71A8A /* ItemInputAbstractViewController.m */; };
+		5D972EEF17CAFB4F009DEC1B /* FoodItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D972EEE17CAFB4F009DEC1B /* FoodItem.m */; };
 		5D972EF717CAFCFB009DEC1B /* UIBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D972EF617CAFCFB009DEC1B /* UIBorderedButton.m */; };
 /* End PBXBuildFile section */
 
@@ -85,8 +86,10 @@
 		5D7A26AF17C3147F00F4E66A /* UIPriceTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPriceTextField.m; sourceTree = "<group>"; };
 		5D7A26B117C31A7B00F4E66A /* UIPriceTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPriceTextFieldDelegate.h; sourceTree = "<group>"; };
 		5D7A26B217C31A7B00F4E66A /* UIPriceTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPriceTextFieldDelegate.m; sourceTree = "<group>"; };
-		5D972EED17CAFB4F009DEC1B /* DinerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DinerItem.h; sourceTree = "<group>"; };
-		5D972EEE17CAFB4F009DEC1B /* DinerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DinerItem.m; sourceTree = "<group>"; };
+		5D849EBD17CDB8C200E71A8A /* ItemInputAbstractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemInputAbstractViewController.h; sourceTree = "<group>"; };
+		5D849EBE17CDB8C200E71A8A /* ItemInputAbstractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemInputAbstractViewController.m; sourceTree = "<group>"; };
+		5D972EED17CAFB4F009DEC1B /* FoodItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodItem.h; sourceTree = "<group>"; };
+		5D972EEE17CAFB4F009DEC1B /* FoodItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodItem.m; sourceTree = "<group>"; };
 		5D972EF517CAFCFB009DEC1B /* UIBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBorderedButton.h; sourceTree = "<group>"; };
 		5D972EF617CAFCFB009DEC1B /* UIBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBorderedButton.m; sourceTree = "<group>"; };
 		B26C530CD6654422B09089AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,8 +118,8 @@
 				5D09849D17BC5981008D7F0D /* SessionDataController.m */,
 				5D0984CA17C2FBC9008D7F0D /* DinerInfo.h */,
 				5D0984CB17C2FBC9008D7F0D /* DinerInfo.m */,
-				5D972EED17CAFB4F009DEC1B /* DinerItem.h */,
-				5D972EEE17CAFB4F009DEC1B /* DinerItem.m */,
+				5D972EED17CAFB4F009DEC1B /* FoodItem.h */,
+				5D972EEE17CAFB4F009DEC1B /* FoodItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,6 +142,8 @@
 				5D7A26A917C307A300F4E66A /* DinerItemViewController.m */,
 				5D7A26AB17C30FC800F4E66A /* DinerReadyViewController.h */,
 				5D7A26AC17C30FC800F4E66A /* DinerReadyViewController.m */,
+				5D849EBD17CDB8C200E71A8A /* ItemInputAbstractViewController.h */,
+				5D849EBE17CDB8C200E71A8A /* ItemInputAbstractViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -356,8 +361,9 @@
 				5D7A26AD17C30FC800F4E66A /* DinerReadyViewController.m in Sources */,
 				5D7A26B017C3148000F4E66A /* UIPriceTextField.m in Sources */,
 				5D7A26B317C31A7B00F4E66A /* UIPriceTextFieldDelegate.m in Sources */,
-				5D972EEF17CAFB4F009DEC1B /* DinerItem.m in Sources */,
+				5D972EEF17CAFB4F009DEC1B /* FoodItem.m in Sources */,
 				5D972EF717CAFCFB009DEC1B /* UIBorderedButton.m in Sources */,
+				5D849EBF17CDB8C200E71A8A /* ItemInputAbstractViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F70BC8CEF1344BC69AF44F41 /* Pods.xcconfig */;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SplitMe/SplitMe-Prefix.pch";
 				INFOPLIST_FILE = "SplitMe/SplitMe-Info.plist";

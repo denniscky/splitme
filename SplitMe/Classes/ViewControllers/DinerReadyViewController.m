@@ -33,6 +33,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.labelDinerName.text = self.diner.name;
+    self.labelDinerName.backgroundColor = self.diner.color;
 }
 
 - (void)didReceiveMemoryWarning
