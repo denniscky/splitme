@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E922D05EA10424C861A04E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B26C530CD6654422B09089AB /* libPods.a */; };
+		1026534C95C4CFCAE013AA90 /* libPods-SplitMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF79F85796B18E9F8E3D7AB /* libPods-SplitMe.a */; };
 		5D09845317BB0272008D7F0D /* cocktail-icon-214x214.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09844F17BB0272008D7F0D /* cocktail-icon-214x214.png */; };
 		5D09845517BB0272008D7F0D /* salad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845117BB0272008D7F0D /* salad.png */; };
 		5D09845817BB085A008D7F0D /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09845717BB085A008D7F0D /* chicken.png */; };
@@ -42,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F53BF26CE139E455250EAD2 /* Pods-SplitMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitMe/Pods-SplitMe.release.xcconfig"; sourceTree = "<group>"; };
 		5D09844F17BB0272008D7F0D /* cocktail-icon-214x214.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-icon-214x214.png"; sourceTree = "<group>"; };
 		5D09845117BB0272008D7F0D /* salad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salad.png; sourceTree = "<group>"; };
 		5D09845717BB085A008D7F0D /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
@@ -92,8 +93,8 @@
 		5D972EEE17CAFB4F009DEC1B /* FoodItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodItem.m; sourceTree = "<group>"; };
 		5D972EF517CAFCFB009DEC1B /* UIBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBorderedButton.h; sourceTree = "<group>"; };
 		5D972EF617CAFCFB009DEC1B /* UIBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBorderedButton.m; sourceTree = "<group>"; };
-		B26C530CD6654422B09089AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F70BC8CEF1344BC69AF44F41 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		786F41C8FADB6A38EA4E683E /* Pods-SplitMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitMe/Pods-SplitMe.debug.xcconfig"; sourceTree = "<group>"; };
+		EFF79F85796B18E9F8E3D7AB /* libPods-SplitMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplitMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +105,7 @@
 				5D1900471698D3A800C0D335 /* UIKit.framework in Frameworks */,
 				5D1900491698D3A800C0D335 /* Foundation.framework in Frameworks */,
 				5D19004B1698D3A800C0D335 /* CoreGraphics.framework in Frameworks */,
-				1E922D05EA10424C861A04E0 /* libPods.a in Frameworks */,
+				1026534C95C4CFCAE013AA90 /* libPods-SplitMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +176,7 @@
 				5D19004C1698D3A800C0D335 /* SplitMe */,
 				5D1900451698D3A800C0D335 /* Frameworks */,
 				5D1900431698D3A800C0D335 /* Products */,
-				F70BC8CEF1344BC69AF44F41 /* Pods.xcconfig */,
+				9F115A412A37C05A68A91527 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,7 +194,7 @@
 				5D1900461698D3A800C0D335 /* UIKit.framework */,
 				5D1900481698D3A800C0D335 /* Foundation.framework */,
 				5D19004A1698D3A800C0D335 /* CoreGraphics.framework */,
-				B26C530CD6654422B09089AB /* libPods.a */,
+				EFF79F85796B18E9F8E3D7AB /* libPods-SplitMe.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,6 +258,15 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		9F115A412A37C05A68A91527 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				786F41C8FADB6A38EA4E683E /* Pods-SplitMe.debug.xcconfig */,
+				4F53BF26CE139E455250EAD2 /* Pods-SplitMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,10 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D1900661698D3A800C0D335 /* Build configuration list for PBXNativeTarget "SplitMe" */;
 			buildPhases = (
+				66E0DEEB50F2C195B3608D16 /* [CP] Check Pods Manifest.lock */,
 				5D19003E1698D3A800C0D335 /* Sources */,
 				5D19003F1698D3A800C0D335 /* Frameworks */,
 				5D1900401698D3A800C0D335 /* Resources */,
-				CE62D5009402464A8F7F1998 /* Copy Pods Resources */,
+				E7E68716FFAC8C7BEB959F09 /* [CP] Embed Pods Frameworks */,
+				FA00EC628F7D59E94A715083 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,19 +338,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CE62D5009402464A8F7F1998 /* Copy Pods Resources */ = {
+		66E0DEEB50F2C195B3608D16 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7E68716FFAC8C7BEB959F09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitMe/Pods-SplitMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA00EC628F7D59E94A715083 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitMe/Pods-SplitMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -441,7 +484,7 @@
 		};
 		5D1900671698D3A800C0D335 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F70BC8CEF1344BC69AF44F41 /* Pods.xcconfig */;
+			baseConfigurationReference = 786F41C8FADB6A38EA4E683E /* Pods-SplitMe.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SplitMe/SplitMe-Prefix.pch";
@@ -454,7 +497,7 @@
 		};
 		5D1900681698D3A800C0D335 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F70BC8CEF1344BC69AF44F41 /* Pods.xcconfig */;
+			baseConfigurationReference = 4F53BF26CE139E455250EAD2 /* Pods-SplitMe.release.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
